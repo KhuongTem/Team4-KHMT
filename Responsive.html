@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>responsive</title>
+	<meta charset="utf-8">
+	<meta name= "view-port" width ="device-width">
+</head>
+<style type="text/css">
+h1{
+	padding :0px;margin: 0px;
+}
+header{
+	line-height: 100px;text-align: center; background-color: red;
+}
+.left{
+	width: 20%;line-height: 400px;
+	background-color: green;float: left;
+	text-align: center;
+}
+.center{
+	width: 60%;line-height: 400px;
+	background-color: blue;float: left;
+	text-align: center;
+	}
+aside{
+	width :20%;line-height: 400px;background-color: yellow;float: left; text-align: center;
+}
+footer{
+	line-height: 100px; background-color: purple;clear: both;text-align: center;
+}
+body{padding:0px;margin: auto;}
+.wrap{width: 1000px;margin: auto;}
+/*------------*/
+.menu ul{padding: 0px; margin: 0px;list-style: none; background-color: purple}
+.menu ul li{ line-height: 35px;display: inline; }
+.menu ul li a {text-decoration: none; color: white;padding: 10px;}
+.menu-responsive select { height: 35px; color: white;background-color: black;width: 100%; }
+.menu-responsive {display: none}
+/*-----------*/
+/*với cỡ màn hình 600px -> ẩn menu , hiển thị menu-responsive*/
+@media all and (max-width: 600px){
+	.menu{display: none;}
+	.menu-responsive{display: block}
+}
+</style>
+<body>
+<div class="wrap">
+	<header><h1>Header</h1></header>
+	<nav class="menu">
+		<ul>
+			<li><a href="#">Trang chủ</a></li>
+			<li><a href="#">Tin tức</a></li>
+			<li><a href="#">Sản phẩm</a></li>
+			<li><a href="#">Giới thiệu</a></li>
+			<li><a href="#">Liên hệ</a></li>
+		</ul>
+	</nav>	
+	<nav class="menu-responsive">
+		<select>
+			<option>Trang chủ</option>
+			<option>Tin tức</option>
+			<option>Sản phẩm</option>
+			<option>Giới thiệu</option>
+			<option>Liên hệ</option>
+		</select>
+	</nav>	
+	<div class="left"><h1>Left</h1></div>
+	<div class="center"><h1>Center</h1></div>
+	<aside><h1>Right</h1></aside>
+	<footer><h1>Footer</h1></footer>
+</div>
+</body>
+</html>
